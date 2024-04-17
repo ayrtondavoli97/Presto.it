@@ -24,20 +24,20 @@
                         <a class="nav-link" href="{{route('announcements.index')}}">i nostri annunci</a>
                     </li>
                     
-                    
                     @auth
                     
-                  
-                        
-                        
-                        
-                        
                     <li>
                         
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('create')}}">crea un annuncio</a>
                         </li>
-                        
+                        @if (Auth::user()->is_revisor)
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('revisor.index')}}">Zona revisore</a>
+                            {{App\Models\Announcement::ToBerevisionedCount()}}
+                            <span class="visually-hidden">unread message</span>
+                        </li>
+                        @endif
                         
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('profile.profile')}}">Vai al tuo profilo</a>

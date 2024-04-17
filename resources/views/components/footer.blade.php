@@ -56,7 +56,7 @@
         <h5 class="mb-3" style="letter-spacing: 2px; color: #7f4722;">Presto Club</h5>
         <ul class="list-unstyled mb-0">
           <li class="mb-1">
-            <a href="#!" style="color: #4f4f4f;">registration</a>
+            <a href="{{route('become.revisor')}}" style="color: #4f4f4f;">Lavora con noi</a>
           </li>
           <li class="mb-1">
             <a href="#!" style="color: #4f4f4f;">application</a>
